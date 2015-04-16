@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		QString strName = strList.at(i);
 		QFileInfo d_tem(strName);
 		QString str = d_tem.suffix();
-		if (fileExt.indexOf(str) != -1)
+		if (fileExt.indexOf(str) != -1 && str.isEmpty() == false)
 		{
 			QFile file(strName);
 			int preNote=0,nowNote=0;//标记/*，*/的个数
